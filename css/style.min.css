@@ -270,10 +270,22 @@ textarea:focus {
   width: 100%;
   display: block;
   padding: 0px 20px;
+  height: 58px;
+  background-color: rgba(106, 123, 139, 0.35);
+  font-size: 25px;
+  color: #969494;
+  font-family: "Avenir Next Cyr";
+  font-weight: 400;
+  margin: 0px 0px 5px 0px;
 }
+.input._error {
+  box-shadow: 0 0 10px solid red;
+}
+
 textarea.input {
+  height: 160px;
   resize: none;
-  padding: 0px 0px;
+  padding: 10px 20px;
 }
 
 .checkbox {
@@ -717,7 +729,7 @@ body.ie ._ibg img {
 }
 .popup::before {
   content: "";
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #d8d8d883;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -761,33 +773,70 @@ body.ie ._ibg img {
 .popup__body {
   transform: scale(0);
   transition: all 0.3s ease 0s;
-  background-color: #fff;
-  padding: 50px;
+  background-color: #8f8c8c;
+  padding: 80px 80px 100px 80px;
   width: 100%;
-  max-width: 800px;
+  max-width: 1200px;
+  background: #FCFCFC;
+  border: 1px solid #979797;
 }
 .popup__close {
-  width: 15px;
-  height: 15px;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  left: 40%;
+  top: 400px;
   cursor: pointer;
   z-index: 30;
-  background: url("../img/icons/close.svg") 0 0 no-repeat;
+  background: url("../img/close.png") 0 0 no-repeat;
 }
 
+.popup-content__body {
+  display: flex;
+}
+
+.content-body__image {
+  margin: 0px 0px 0px 50px;
+}
+.content-body__iner {
+  text-align: center;
+  margin: 0px 0px 0px 51px;
+}
+
+.body-iner__title {
+  font-size: 36px;
+  font-family: "Avenir Next LT Pro";
+  font-weight: 700;
+  line-height: 43px;
+  color: #5C5B5B;
+  margin: 0px 0px 40px 0px;
+  text-transform: uppercase;
+}
+.body-iner__subtitle {
+  font-size: 36px;
+  font-family: "Avenir Next LT Pro";
+  font-weight: 700;
+  line-height: 43px;
+  color: #5C5B5B;
+  margin: 0px 0px 70px 0px;
+}
+.body-iner__text {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0px 0px 100px 0px;
+}
 .header {
   background: #6a7b8b;
   position: fixed;
   width: 100%;
+  height: auto;
   top: 0;
   left: 0;
   z-index: 50;
 }
 @media (min-width: 767.98px) {
   .header._scroll .header__content {
-    height: 60px;
+    height: 70px;
   }
 }
 .header__content {
@@ -806,9 +855,11 @@ body.ie ._ibg img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 5px 0px 10px 0px;
 }
 .header__logo {
-  margin-top: 8px;
+  padding: 5px 0px 5px 0px;
+  margin-top: 3px;
   position: relative;
   z-index: 5;
 }
@@ -895,7 +946,7 @@ body.ie ._ibg img {
 }
 @media (min-width: 991.98px) {
   .menu__link:hover {
-    color: #ff6464;
+    color: #383535f6;
   }
   .menu__link:hover::after {
     width: 80%;
@@ -1306,7 +1357,7 @@ body.ie ._ibg img {
 .actions-about-as__btn::after {
   content: "";
   transition: all 0.3s ease 0s;
-  background-color: #ff6464;
+  background-color: #383535f6;
   border-radius: 10px;
   position: absolute;
   width: 0%;
@@ -1319,7 +1370,7 @@ body.ie ._ibg img {
   z-index: 2;
 }
 .actions-about-as__btn:hover {
-  color: #5c5b5b;
+  color: #fd3f3f;
 }
 .actions-about-as__btn:hover::after {
   width: 100%;
@@ -1730,6 +1781,7 @@ body.ie ._ibg img {
 }
 
 .contact__content {
+  text-align: center;
   margin: 0 auto;
   max-width: 812px;
 }
@@ -1753,6 +1805,9 @@ body.ie ._ibg img {
     max-width: 120px;
   }
 }
+.content__form {
+  margin: 0px 15px 0px 15px;
+}
 .content__title {
   text-align: center;
   font-family: "Avenir Next Cyr";
@@ -1761,7 +1816,7 @@ body.ie ._ibg img {
   font-size: 40px;
   line-height: 49px;
   color: #5c5b5b;
-  margin: 0px 0px 80px 0px;
+  margin: 70px 0px 80px 0px;
 }
 @media (max-width: 767.98px) {
   .content__title {
@@ -1773,7 +1828,26 @@ body.ie ._ibg img {
     margin: 0px 0px 50px 0px;
   }
 }
-
+.content__title-1 {
+  text-align: center;
+  font-family: "Avenir Next Cyr";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 49px;
+  color: #5c5b5b;
+  margin: 0px 0px 60px 0px;
+}
+@media (max-width: 767.98px) {
+  .content__title-1 {
+    margin: 0px 0px 50px 0px;
+  }
+}
+@media (max-width: 479.98px) {
+  .content__title-1 {
+    margin: 0px 0px 50px 0px;
+  }
+}
 .contact-body__text {
   margin: 0 auto;
   max-width: 812px;
@@ -1815,6 +1889,20 @@ body.ie ._ibg img {
     height: 300px;
     width: 96%;
   }
+}
+
+.form_label {
+  float: left;
+  display: inline-block;
+  font-family: "Avenir Next Cyr";
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 32px;
+  color: #5C5B5B;
+  margin: 0px 0px 3px 0px;
+}
+.form__line {
+  margin: 0px 0px 50px 0px;
 }
 
 .page {
